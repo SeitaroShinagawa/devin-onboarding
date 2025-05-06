@@ -6,6 +6,22 @@ A Python library project template for onboarding purposes.
 
 - `src/`: Contains the source code for the project
 - `tests/`: Contains pytest tests for the project
+- `docs/`: Contains Sphinx documentation
+
+## Documentation
+
+The project documentation is automatically built and deployed to GitHub Pages:
+
+[View Documentation](https://SeitaroShinagawa.github.io/devin-onboarding/)
+
+To build the documentation locally:
+
+```bash
+cd docs
+make html
+```
+
+Then open `docs/_build/html/index.html` in your browser.
 
 ## Setup
 
