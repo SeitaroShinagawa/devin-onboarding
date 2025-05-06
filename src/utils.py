@@ -4,17 +4,17 @@ import re
 
 
 def convert_date_string(date_string: str) -> date:
-    """日付文字列をdatetime.dateオブジェクトに変換します。
+    """Converts a date string to a datetime.date object.
     
     Args:
-        date_string (str): 変換する日付文字列。フォーマットは"YYYY-MM-DD"である必要があります。
-            例: "2025-05-07"
+        date_string (str): The date string to convert. Format must be "YYYY-MM-DD".
+            Example: "2025-05-07"
     
     Returns:
-        date: 変換された日付オブジェクト。
+        date: The converted date object.
     
     Raises:
-        ValueError: 日付文字列が無効な形式の場合に発生します。
+        ValueError: If the date string has an invalid format.
     """
     if not date_string or not re.match(r'^\d{4}-\d{2}-\d{2}$', date_string):
         raise ValueError(f"Invalid date format: {date_string}. Expected format: YYYY-MM-DD")

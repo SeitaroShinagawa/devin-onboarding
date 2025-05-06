@@ -5,7 +5,7 @@ from src.utils import convert_date_string
 
 
 def test_convert_date_string_valid():
-    """有効な日付文字列が正しく変換されることをテストします。"""
+    """Tests that valid date strings are correctly converted."""
     test_cases = [
         ("2025-05-07", date(2025, 5, 7)),
         ("2023-01-01", date(2023, 1, 1)),
@@ -17,14 +17,14 @@ def test_convert_date_string_valid():
 
 
 def test_convert_date_string_invalid():
-    """無効な日付文字列でValueErrorが発生することをテストします。"""
+    """Tests that ValueError is raised for invalid date strings."""
     invalid_dates = [
-        "2025/05/07",  # 不正なセパレータ
-        "25-5-7",      # 不正な桁数
-        "abcd-ef-gh",  # 数字ではない
-        "",            # 空文字列
-        "2023-13-01",  # 不正な月
-        "2023-02-30",  # 不正な日
+        "2025/05/07",  # Invalid separator
+        "25-5-7",      # Invalid digit count
+        "abcd-ef-gh",  # Not numeric
+        "",            # Empty string
+        "2023-13-01",  # Invalid month
+        "2023-02-30",  # Invalid day
     ]
     
     for invalid_date in invalid_dates:
