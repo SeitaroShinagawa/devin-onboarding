@@ -15,8 +15,9 @@ A Python library project template for onboarding purposes.
    ```
 
 2. Activate the virtual environment:
-   - On Windows: `venv\Scripts\activate`
-   - On Unix or MacOS: `source venv/bin/activate`
+   ```bash
+   source venv/bin/activate
+   ```
 
 3. Install dependencies:
    ```bash
